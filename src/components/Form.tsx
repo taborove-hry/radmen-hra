@@ -34,7 +34,7 @@ const makeDebouncedRequest = debounce((attemptedPassword: string, router: NextRo
     method: "POST",
     body: JSON.stringify({ password: attemptedPassword }),
   }).then(res => res.json()).then((result: Country) => {
-    if (result) {
+    if (result && result.slug) {
       router.push(`/${result.slug}`)
       return
     }
