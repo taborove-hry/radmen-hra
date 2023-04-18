@@ -1,6 +1,6 @@
 import { Country } from "@/utils/validate-password";
 import { NextRouter, useRouter } from "next/router"
-import { ChangeEvent, useRef, useState } from "react"
+import { ChangeEvent, useEffect, useRef, useState } from "react"
 import { FormEvent } from "react"
 
 
@@ -46,6 +46,7 @@ const makeDebouncedRequest = debounce((attemptedPassword: string, router: NextRo
 export default function Form() {
   const router = useRouter()
   const [password, setPassword] = useState("")
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const onPswdChange = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value)
@@ -57,18 +58,22 @@ export default function Form() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-
   }
 
+  useEffect(() => {
+    inputRef.current?.focus()
+  }, [])
+
   return (
+    <div className="text-center flex-1">
     <form onSubmit={handleSubmit}>
       <fieldset>
-        <div>
-        <label htmlFor="pwd">Zadejte heslo:</label>
+        <div className="my-6">
+        {/* <label htmlFor="pwd"><h1 className='text-4xl font-black'>Sděl nám své heslo, diplomate</h1></label> */}
         </div>
         <div>
 
-        <input type="text" value={password} onChange={onPswdChange} id="pswd" />
+        <input ref={inputRef} className="p-4 text-center" autoComplete='off' placeholder="Sděl heslo, diplomate" style={{width: '100%', fontSize: '24px'}} type="text" value={password} onChange={onPswdChange} id="pswd" autoFocus />
         </div>
       </fieldset>
       <fieldset>
@@ -77,5 +82,6 @@ export default function Form() {
         </div>
       </fieldset>
     </form>
+    </div>
   )
 }
