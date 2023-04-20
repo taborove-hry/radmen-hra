@@ -73,7 +73,7 @@ export default function Form() {
         </div>
         <div>
 
-        <input ref={inputRef} className="p-4 text-center" autoComplete='off' placeholder="Sděl heslo, diplomate" style={{width: '100%', fontSize: '24px'}} type="text" value={password} onChange={onPswdChange} id="pswd" autoFocus />
+        <input ref={inputRef} className="p-4 text-center text-black bg-white" autoComplete='off' placeholder="Sděl heslo, diplomate" style={{width: '100%', fontSize: '24px'}} type="text" value={password} onChange={onPswdChange} id="pswd" autoFocus />
         </div>
       </fieldset>
       <fieldset>
