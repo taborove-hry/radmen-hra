@@ -41,7 +41,7 @@ const makeDebouncedRequest = debounce((attemptedPassword: string, router: NextRo
   }, () => {
     // error
   })
-}, 500)
+}, 250)
 
 export default function Form() {
   const router = useRouter()
