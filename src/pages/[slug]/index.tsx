@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function CountryPage({ country }: { country: Country }) {
   return (
-    <main className="min-h-screen " style={{backgroundImage: `url(${country.flag || ''})`, backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundPosition: 'center top'}}>
+    <main className="min-h-screen " style={{backgroundImage: `url(${country.flag || ''})`, backgroundSize: country.backgroundSize || 'cover', backgroundAttachment: 'fixed', backgroundPosition: country.backgroundPosition || 'center top'}}>
       <div className='flex flex-1 px-6  min-h-screen flex-col items-center py-14' style={{ backgroundImage: 'url(https://djaccw3ms0b81.cloudfront.net/zbytecnosti/backggrad2.png)', backgroundRepeat: 'repeat-y', backgroundSize: '120%', backgroundPosition: 'top center'}}>
       <div className="z-10 w-full flex-col max-w-5xl items-center font-mono text-sm lg:flex">
       <div>

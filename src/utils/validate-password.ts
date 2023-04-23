@@ -1,4 +1,4 @@
-export type Country = { password: string, flag?:string; slug: string, country: string, html?: string; images?: string[]  }
+export type Country = { password: string;  backgroundPosition?: string; backgroundSize?: string; flag?:string; slug: string, country: string, html?: string; images?: string[]  }
 
 export const Britain: Country = {
   password: 'God save the king',
@@ -60,6 +60,7 @@ export const Germany: Country = {
   password: 'Es lebe der Kaiser',
   slug: 'deutsches-kaiserreich',
   country: 'Deutsches Kaiserreich',
+  backgroundPosition: 'center center',
   flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/germanyflag.png',
   html: `<p style="margin: 1em 0">
   Vážený diplomate,
@@ -117,8 +118,9 @@ export const Germany: Country = {
 export const Austria: Country = {
   password: 'Es lebe der Konig und Kaiser',
   slug: 'osterreich-ungarn',
+  backgroundPosition: 'center center',
   country: 'Österreichisch-Ungarische Monarchie',
-  flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/austriahungaryflag.png',
+  flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/austriaungarnsimple.svg',
   html: `<p style="margin: 1em 0">
   Vážený diplomate,
 </p>
@@ -170,6 +172,7 @@ export const Austria: Country = {
 export const Russia: Country = {
   password: 'Da zdravstvuyet tsar',
   slug: 'rossiyskaya-imperiya',
+  backgroundPosition: 'center center',
   flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/russianflag.png',
   country: 'Rossiyskaya Imperiya',
   html: `<p style="margin: 1em 0">
@@ -224,6 +227,7 @@ export const Russia: Country = {
 export const Italy: Country = {
   password: 'Viva il Re',
   slug: 'regno-ditalia',
+  backgroundSize: '200%',
   country: 'Regno d\'Italia',
   flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/italyflag.png',
   html: `<p style="margin: 1em 0">
@@ -274,6 +278,7 @@ export const Italy: Country = {
 export const Turkey: Country = {
   password: 'Yasasin Sultanimiz',
   slug: 'osmanli-imparatorlugu',
+  backgroundPosition: '-300px center',
   country: 'Devlet-i ʿAlīye-i ʿOsmānīye',
   flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/turkeyflag.png',
   html: `<p style="margin: 1em 0">
@@ -317,6 +322,8 @@ export const Turkey: Country = {
 export const France: Country = {
   password: 'Vive la Republique',
   slug: 'troisieme-republique-francaise',
+  backgroundPosition: 'center center',
+  backgroundSize: '200%',
   country: 'France',
   flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/franceflag.png',
   html: `<p style="margin: 1em 0;">
