@@ -1,9 +1,10 @@
-export type Country = { password: string, slug: string, country: string, html?: string; images?: string[]  }
+export type Country = { password: string, flag?:string; slug: string, country: string, html?: string; images?: string[]  }
 
 export const Britain: Country = {
   password: 'God save the king',
   slug: 'united-kingdom-of-great-britain-and-northern-ireland',
   country: 'United Kingdom of Great Britain and Northern Ireland',
+  flag: 'https://djaccw3ms0b81.cloudfront.net/zbytecnosti/britainflag.png',
   images: ['https://djaccw3ms0b81.cloudfront.net/zbytecnosti/britan.jpg'],
   html: `
   <p style="margin: 1em 0">
